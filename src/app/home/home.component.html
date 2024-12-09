@@ -1,0 +1,95 @@
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="navbar-brand">
+      <a href="#">LIBA ENTERPRISE</a>
+    </div>
+    <ul class="navbar-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="/products">Products</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+    <button class="navbar-toggle" (click)="toggleNavbar()">&#9776;</button>
+  </nav>
+  
+  <!-- Parallax Container -->
+  <div class="parallax-container">
+    <div class="parallax-content">
+      <h1 style="color:white ;">Your Trusted Exporter</h1>
+      <p style="color: #EAEAEA;">Discover quality products from India</p>
+      <button style="background-color: #32CD32;" class="view-products-btn">Place Your Order</button>
+    </div>
+  </div>
+  
+  <!-- Additional Sections -->
+  <section class="about-section">
+    <div class="heading-container">
+      <h2 class="main-heading">WHO WE ARE</h2>
+      <p class="sub-heading">ABOUT GLOBAL EXPORTERS</p>
+    </div>
+    <div class="content-container">
+      <div class="text-content">
+        <h3>Premium Quality Food Products with Private Labeling Options</h3>
+        <p>
+          Born out of the passion for high-quality food items by a group of young entrepreneurs, 
+          Global Exporters have established itself as one of the most successful FMCG management enterprises. 
+          We export international-level food products including Halal meat products, vegetables, fruits, 
+          nuts, cereals, and spices across the world.
+        </p>
+        <a href="#" class="view-more-button">View More</a>
+      </div>
+      <div class="image-content">
+        <img src="../../assets/about_image.jpg" alt="Exporting goods" class="about_image" />
+      </div>
+    </div>
+  </section>
+  
+  
+
+  <div class="product-section">
+    <h2 class="section-title">OUR PRODUCTS</h2>
+    <p class="section-subtitle">Spreading Goodness with Love</p>
+  
+    <!-- Categories Tabs -->
+    <div class="categories">
+      <button
+        *ngFor="let category of categories"
+        (click)="selectCategory(category)"
+        [class.active]="category === selectedCategory"
+      >
+        {{ category }}
+      </button>
+    </div>
+  
+    <!-- Products Grid -->
+    <div class="product-grid">
+      <div class="product-card" *ngFor="let product of filteredProducts">
+        <img [src]="product.image" [alt]="product.name" class="product-image" />
+        <h3 class="product-name">{{ product.name }}</h3>
+        <p class="product-description">{{ product.description }}</p>
+      </div>
+    </div>
+  </div>
+  
+  <section class="clients-section">
+    <h2>OUR MAJOR CLIENTS</h2>
+    <p>We strive hard to uphold the trust placed in us</p>
+    <div class="clients-container">
+      <div class="client-card">
+        <img src="../../assets/client1.jpg" alt="Client 1" />
+      </div>
+      <div class="client-card">
+        <img src="../../assets/client2.jpg" alt="Client 2" />
+      </div>
+      <div class="client-card">
+        <img src="../../assets/client3.jpg" alt="Client 3" />
+      </div>
+      <div class="client-card">
+        <img src="../../assets/client4.jpg" alt="Client 4" />
+      </div>
+      <div class="client-card">
+        <img src="../../assets/client5.jpg" alt="Client 5" />
+      </div>
+    </div>
+  </section>
+  

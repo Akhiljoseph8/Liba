@@ -1,0 +1,159 @@
+/* General styles */
+.contact-page {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-image: url('../../../assets/contact_page2.jpg'); /* Replace with your preferred image URL */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 80px 0;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+  margin: 0;
+}
+
+.breadcrumb {
+  text-align: center;
+  color: #666;
+  margin: 10px 0;
+}
+
+/* Map and Contact Info */
+.row-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center alignment */
+  gap: 20px;
+  padding: 10px 100px;
+}
+
+.map-section {
+  flex: 1 1 40%; /* Decreased width */
+  min-width: 250px;
+}
+
+.map-section iframe {
+  width: 100%;
+  height: 300px; /* Reduced height */
+  border-radius: 10px;
+  border: none;
+}
+
+.contact-info {
+  flex: 1 1 30%; /* Decreased width */
+  min-width: 300px;
+  background: #f1f3f5;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h5 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.contact-info p {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.contact-info a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Contact Form */
+.contact-form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 60%; /* Increased width */
+  margin: 0 auto; /* Center align */
+}
+
+.contact-form .form-group {
+  margin-bottom: 15px;
+}
+
+.contact-form label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+.contact-form button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 1000px) {
+  .header {
+    padding: 50px 0;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .row-container {
+    flex-direction: column;
+  }
+
+  .map-section,
+  .contact-info {
+    flex: 1 1 100%;
+  }
+
+  .map-section iframe {
+    height: 250px;
+  }
+
+  .contact-form {
+    width: 90%; /* Adjust width for smaller screens */
+  }
+
+  .row-container {
+    
+    padding: 10px 30px;
+  }
+}
