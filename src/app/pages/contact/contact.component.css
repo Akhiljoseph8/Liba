@@ -38,6 +38,9 @@
 .map-section {
   flex: 1 1 40%; /* Decreased width */
   min-width: 250px;
+  border: 2px solid #ccc; /* Add border around map */
+  border-radius: 10px; /* Optional: adds rounded corners */
+  padding: 10px;
 }
 
 .map-section iframe {
@@ -48,12 +51,13 @@
 }
 
 .contact-info {
-  flex: 1 1 30%; /* Decreased width */
+  flex: 1 1 30%; 
   min-width: 300px;
   background: #f1f3f5;
-  padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Center align the content */
+  padding: 20px; /* Add padding for better spacing */
 }
 
 .contact-info h5 {
@@ -149,11 +153,10 @@
   }
 
   .contact-form {
-    width: 90%; /* Adjust width for smaller screens */
+    width: 100%; /* Adjust width for smaller screens */
   }
 
   .row-container {
-    
     padding: 10px 30px;
   }
 }
