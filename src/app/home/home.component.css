@@ -61,6 +61,9 @@
     padding: 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   }
+
+
+  
   
   /* Responsive Navbar */
   @media (max-width: 768px) {
@@ -71,13 +74,29 @@
     .navbar-toggle {
       display: block;
     }
+
+    .navbar-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+    }
+    .navbar-links li {
+      margin: 10px 0;
+      border-bottom: 1px solid #ddd; /* Separation line */
+      padding-bottom: 10px; /* Space between links */
+    }
+    
+    .navbar-links li:last-child {
+      border-bottom: none; /* Remove the line for the last link */
+    }
+
   }
   
   /* Parallax Container */
   .parallax-container {
     position: relative;
     height: 100vh;
-    background-image: url('../../assets/website_background2.jpg'); /* Replace with your image path*/
+    background-image: url('../../assets/website_background2.jpg');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -87,7 +106,7 @@
     align-items: center;
     text-align: center;
     color: white;
-    margin-top: 60px;  /*Adjust to account for fixed navbar*/
+    margin-top: 60px; 
   }
   
   .parallax-content h1 {
@@ -103,7 +122,7 @@
     margin-top: 1rem;
     padding: 0.75rem 2rem;
     font-size: 1rem;
-    background-color: #28a745;
+    background-color: #2458b8;
     color: white;
     border: none;
     border-radius: 5px;
@@ -111,9 +130,6 @@
     transition: background-color 0.3s ease;
   }
   
-  .view-products-btn:hover {
-    background-color: #218838;
-  }
   
   /* Content Sections */
   .content-section {
