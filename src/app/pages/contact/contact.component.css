@@ -33,6 +33,7 @@
   justify-content: center; /* Center alignment */
   gap: 20px;
   padding: 10px 100px;
+  
 }
 
 .map-section {
@@ -132,16 +133,16 @@
 /* Responsive Design */
 @media (max-width: 1000px) {
   .header {
-    padding: 50px 0;
+    padding: 80px 0;
   }
 
   .title {
     font-size: 2rem;
   }
 
-  .row-container {
+  /* .row-container {
     flex-direction: column;
-  }
+  } */
 
   .map-section,
   .contact-info {

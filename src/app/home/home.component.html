@@ -1,22 +1,10 @@
-<!-- Navbar -->
-<nav class="navbar">
-    <div class="navbar-brand">
-      <a href="">LIBA ENTERPRISE</a>
-    </div>
-    <ul class="navbar-links">
-      <li><a href="">Home</a></li>
-      <li><a href="/products">Products</a></li>
-      <li><a href="/contact">Contact</a></li>
-      <li><a href="/about">About</a></li>
-    </ul>
-    <button class="navbar-toggle" (click)="toggleNavbar()">&#9776;</button>
-  </nav>
+
   
   <!-- Parallax Container -->
   <div class="parallax-container">
     <div class="parallax-content">
-      <h1 style="color:white ;">Your Trusted Exporter</h1>
-      <p style="color: #EAEAEA;">Discover quality products from India</p>
+      <h1 style="color:white ;">YOUR PRIME SHIP MAN</h1>
+      <p style="color: #EAEAEA;">Hit in fair solutions</p>
       <a href="https://orderapp-mu.vercel.app/user"><button class="view-products-btn">Place Your Order</button></a>
     </div>
   </div>
@@ -24,22 +12,19 @@
   <!-- Additional Sections -->
   <section class="about-section">
     <div class="heading-container">
-      <h2 class="main-heading">WHO WE ARE</h2>
-      <p class="sub-heading">ABOUT GLOBAL EXPORTERS</p>
+      <h2 class="main-heading">WHY US</h2>
+      <p class="sub-heading">ABOUT LIBA ENTERPRISE</p>
     </div>
     <div class="content-container">
       <div class="text-content">
-        <h3>Premium Quality Food Products with Private Labeling Options</h3>
+        <h3>Superior products with private labelling option</h3>
         <p>
-          Born out of the passion for high-quality food items by a group of young entrepreneurs, 
-          Global Exporters have established itself as one of the most successful FMCG management enterprises. 
-          We export international-level food products including Halal meat products, vegetables, fruits, 
-          nuts, cereals, and spices across the world.
+          At Liba Enterprises Pvt Ltd, we are dedicated to connecting businesses around the world with the highest quality products, sourced from trusted suppliers across the globe. Our extensive network, commitment to excellence, and customer-focused approach make us the ideal partner for all your export needs.
         </p>
         <a href="/about" class="view-more-button">View More</a>
       </div>
       <div class="image-content">
-        <img src="../../assets/about_image.jpg" alt="Exporting goods" class="about_image" />
+        <img src="../../assets/about_image2.jpg" alt="Exporting goods" class="about_image" />
       </div>
     </div>
   </section>
@@ -51,7 +36,7 @@
     <p class="sub-heading">Spreading Goodness with Love</p>
   
     <!-- Categories Tabs -->
-    <div class="categories">
+    <div class="categories" *ngIf="!isMobileView">
       <button
         *ngFor="let category of categories"
         (click)="selectCategory(category)"
@@ -60,11 +45,26 @@
         {{ category }}
       </button>
     </div>
+
+    <div class="mobile-categories" *ngIf="isMobileView">
+      <button (click)="toggleMenu()" class="menu-toggle">
+        &#9776; Categories
+      </button>
+      <div class="dropdown-menu" [class.show]="menuOpen">
+        <button
+          *ngFor="let category of categories"
+          (click)="selectCategory(category); toggleMenu()"
+          [class.active]="category === selectedCategory"
+        >
+          {{ category }}
+        </button>
+      </div>
+    </div>
   
     <!-- Products Grid -->
     <div class="product-grid">
-      <div class="product-card" *ngFor="let product of filteredProducts">
-        <img [src]="product.image" [alt]="product.name" class="product-image" />
+      <div class="product-card" *ngFor="let product of filteredProducts"  style="background-color: #F0F8FF;">
+        <img [src]="product.image" [alt]="product.name" class="product-image" style="width:466px" />
         <h3 class="product-name">{{ product.name }}</h3>
         <p class="product-description">{{ product.description }}</p>
       </div>

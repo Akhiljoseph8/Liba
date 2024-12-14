@@ -1,102 +1,10 @@
-/* Navbar Styles */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    padding: 1rem 2rem;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 10;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .navbar-brand a {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: black;
-    text-decoration: none;
-  }
-  
-  .navbar-links {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .navbar-links li {
-    margin: 0 1rem;
-  }
-  
-  .navbar-links a {
-    text-decoration: none;
-    color: black;
-    font-size: 1rem;
-    font-weight: 500;
-    transition: color 0.3s ease;
-  }
-  
-  .navbar-links a:hover {
-    color: #28a745;
-  }
-  
-  /* Navbar Toggle for Mobile */
-  .navbar-toggle {
-    display: none;
-    font-size: 1.5rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .navbar-responsive {
-    display: flex !important;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background: white;
-    padding: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  }
 
-
-  
-  
-  /* Responsive Navbar */
-  @media (max-width: 768px) {
-    .navbar-links {
-      display: none;
-    }
-  
-    .navbar-toggle {
-      display: block;
-    }
-
-    .navbar-links {
-      display: none;
-      flex-direction: column;
-      width: 100%;
-    }
-    .navbar-links li {
-      margin: 10px 0;
-      border-bottom: 1px solid #ddd; /* Separation line */
-      padding-bottom: 10px; /* Space between links */
-    }
-    
-    .navbar-links li:last-child {
-      border-bottom: none; /* Remove the line for the last link */
-    }
-
-  }
   
   /* Parallax Container */
   .parallax-container {
     position: relative;
     height: 100vh;
-    background-image: url('../../assets/website_background2.jpg');
+    background-image: url('../../assets/home_background.jpg');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -106,7 +14,7 @@
     align-items: center;
     text-align: center;
     color: white;
-    margin-top: 60px; 
+    /* margin-top: 80px;  */
   }
   
   .parallax-content h1 {
@@ -203,6 +111,81 @@
     color: #fff;
   }
   
+  .mobile-categories {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 5;
+  }
+  
+  .mobile-categories .menu-toggle {
+    border: none;
+    padding: 12px 20px;
+    background-color: #2458b8;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+  
+  .mobile-categories .menu-toggle:hover {
+    background-color: #0056b3;
+  }
+  
+  .mobile-categories .dropdown-menu {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+  }
+  
+  .mobile-categories .dropdown-menu button {
+    padding: 10px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .mobile-categories .dropdown-menu button:hover,
+  .mobile-categories .dropdown-menu button.active {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .mobile-categories .dropdown-menu.show {
+    display: flex;
+  }
+  
+  @media screen and (max-width: 850px) {
+    .categories {
+      display: none;
+    }
+  
+    .mobile-categories {
+      display: flex;
+    }
+  }
+  
+  
+  
   /* Products grid styling */
   .product-grid {
     display: grid;
@@ -216,7 +199,7 @@
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 15px;
+    padding: 10px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin: 0 auto; 
@@ -305,6 +288,8 @@
     color: #333;
     line-height: 1.6;
     margin-bottom: 20px;
+    text-align: justify;
+
   }
   
   .view-more-button {
@@ -336,7 +321,7 @@
     }
     
     .image-content img {
-      max-width: 300px; /* Further reduce size for smaller screens */
+      max-width: 450px; /* Further reduce size for smaller screens */
     }
    
   }

@@ -31,7 +31,7 @@
   <!-- Contact Form Section -->
   <div class="row-container">
     <div class="contact-form">
-      <form action="https://formspree.io/f/mnnqyzll" method="POST" #contactForm="ngForm">
+      <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
         <div class="form-group">
           <label for="name">Your Name*</label>
           <input

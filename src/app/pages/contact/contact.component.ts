@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 
 @Component({
@@ -12,12 +13,20 @@ export class ContactComponent {
     message: ''
   };
 
+  constructor(private http: HttpClient) {}
   onSubmit() {
-    alert(`Thank you, ${this.formData.name}! Your message has been sent.`);
-    // Reset form data
-    this.formData = { name: '', email: '', message: '' };
-  }
+    this.http
+      .post('http://localhost:3000/send-mail', this.formData)
+      .subscribe({
+        next: (response: any) => {
+          alert('Your message has been sent!');
+          this.formData = { name: '', email: '', message: '' }; // Reset form
+        },
+        error: (error) => {
+          alert('Failed to send message. Please try again later.'); 
+        },
+      });
 
-
+    }
   
 }
