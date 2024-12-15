@@ -19,7 +19,7 @@ module.exports = async (req, res) => {
     from: email,
     to: 'akhiljosephaj85@gmail.com',
     subject: `New Contact Message from ${name}`,
-    text: message,
+    text: `email: ${email} \n message: ${message}`,
   };
 
   try {
