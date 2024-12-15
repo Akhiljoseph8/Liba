@@ -1,0 +1,23 @@
+{
+    "builds": [
+      {
+        "src": "api/*.js",
+        "use": "@vercel/node"
+      },
+      {
+        "src": "angular.json",
+        "use": "@vercel/static-build"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "/api/$1"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/index.html"
+      }
+    ]
+  }
+  

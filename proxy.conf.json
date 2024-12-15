@@ -1,9 +1,9 @@
 {
-    "/google-script": {
-      "target": "https://script.google.com",
-      "secure": false,
-      "pathRewrite": {
-        "^/google-script": "/macros/s/AKfycbxBpxczDPJSxIkyFwk3DTjXzeWXw79Kqg5Fwyc1NA_KXMRIpMSao6YcWbGXHEjq6ObWUg/exec"
-      }
-    }
+  "/api": {
+    "target": "http://localhost:3000",
+    "secure": false,
+    "changeOrigin": true 
   }
+}
+
+
